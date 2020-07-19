@@ -14,8 +14,8 @@ crossexonar - Protean
 chillyfang - Black-Eyed Shadekin
 cgr - Protean
 flaktual - Vox
-Flurriee - Protean
 funnyman2003 - Xenochimera
+flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
@@ -47,6 +47,7 @@ silvertalismen - Vox
 silvertalismen - Xenochimera
 singo - Gutter
 storesund97 - Protean
+sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
