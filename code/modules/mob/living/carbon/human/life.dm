@@ -1103,7 +1103,7 @@
 			drowsyness = max(0, drowsyness - 1)
 			eye_blurry = max(2, eye_blurry)
 			if (prob(5))
-				sleeping += 1
+				Sleeping(1)
 				Paralyse(5)
 
 		// If you're dirty, your gloves will become dirty, too.
@@ -1258,7 +1258,14 @@
 		if(blinded)
 			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
 			throw_alert("blind", /obj/screen/alert/blind)
-		
+
+		else
+			clear_fullscreens()
+			clear_alert("blind")
+
+		if(blinded)
+			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+
 		else if(!machine)
 			clear_fullscreens()
 			clear_alert("blind")
@@ -1591,7 +1598,7 @@
 	if(Pump)
 		temp += Pump.standard_pulse_level - PULSE_NORM
 
-	if(round(vessel.get_reagent_amount("blood")) <= BLOOD_VOLUME_BAD)	//how much blood do we have
+	if(round(vessel.get_reagent_amount("blood")) <= species.blood_volume*species.blood_level_danger)	//how much blood do we have
 		temp = temp + 3	//not enough :(
 
 	if(status_flags & FAKEDEATH)
